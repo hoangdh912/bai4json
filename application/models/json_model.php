@@ -28,12 +28,22 @@ class json_model extends CI_Model {
 		$this->db->where('name', 'contact');
 		$result = $this->db->get('warehouse');
 		$result = $result->result_array();
-		return $result;
 
 		foreach ($result as $value) {
 			$showResult = $value['data'];
 		}
 		return $showResult;
+	}
+
+	public function updateData($data)
+	{
+		$this->db->where('name', 'contact');
+		// Create an array
+		$result = array(
+			'name' => 'contact',
+			'data' => $data
+		);
+		return $this->db->update('warehouse', $result);
 	}
 }
 

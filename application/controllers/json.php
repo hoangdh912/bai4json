@@ -57,7 +57,7 @@ class json extends CI_Controller {
 		$result = json_encode($result);
 		// After unsetting
 		$this->json_model->updateData($result);
-		header('Location: ' . base_url() . '/index.php/json');
+		header('Location: ' . base_url() . 'index.php/json');
 	}
 
 	public function addData()
@@ -83,7 +83,7 @@ class json extends CI_Controller {
 
 		// add to model
 		$this->json_model->updateData($result);
-		header('Location: ' . base_url() . '/index.php/json');
+		header('Location: ' . base_url() . 'index.php/json');
 	}
 }
 
